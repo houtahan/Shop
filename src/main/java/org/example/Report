@@ -1,0 +1,11 @@
+The assignment was to create an online shop which handles 3 types of accounts and accesses which are user, seller and
+admin. The objectives were to completely understand polymorphism and inheritance and use them in our code.
+The programming language used was java and gradle was used as package manager.
+The most challenging bug that was faced was : Execution failed for task ':Main.main()'.
+                                              > Process 'command 'C:/Program Files/Java/jdk1.8.0_351/bin/java.exe'' finished with non-zero exit value 1
+which was because of the arraylists and the fact that we cant add to them if they are null and this problem was handled
+by preventing the arraylists to be null at the moment of creating them.
+The testing process was straightforward because you would know what the program must output at any moment and any result
+besides that would mean something is not happening completely correctly in the code.
+The code I wrote does the main tasks that were presented and also bonus tasks number 4, 7 and 10.
+This assignment was a great exercise to learn the principles of java oop and learn to use them.
