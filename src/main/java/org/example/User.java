@@ -16,7 +16,7 @@ public class User {
     private ArrayList<Product> userOrders = new ArrayList<>();
     private ArrayList<Product> purchasedProducts = new ArrayList<>();
     private double wallet;
-    private boolean subscriptionService;
+    private boolean subscriptionService;//
 
     public User(String username,
                 String password,
