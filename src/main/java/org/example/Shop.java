@@ -205,12 +205,12 @@ public class Shop {
 
 
     public static void addUser(){
-        User salam = new User("salam", "salmi", "slm", 0, null, null, null, null, 320, true);
+        User salam = new User("Amir", "1234", "slm", 0, null, null, null, null, 320, false);
         users.add(salam);
     }
 
     public static void addSeller(){
-        Seller salam = new Seller("salam", "salmi", null, 0.00, false);
+        Seller salam = new Seller("Reza", "1234", null, 0.00, false);
         sellers.add(salam);
     }
 

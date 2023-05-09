@@ -12,22 +12,19 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hi!");
         System.out.println("Welcome to Houtan's online shop!");
-        //Thread.sleep(4000);
+        Thread.sleep(4000);
         System.out.println("You can contact us via our web address and support phone number!");
         System.out.println("Web address : houtantah@gmail.com");
         System.out.println("Phone number : 09002471382");
-        //Thread.sleep(4000);
+        Thread.sleep(4000);
         System.out.println("--------------------------------");
-        Admin admin = new Admin("houtahan",
-                "tahanha03",
+        Admin admin = new Admin("Ali",
+                "1234",
                 "houtantah@gmail.com");
         Admin.addHeadAdmin(admin);
         Shop.addSeller();
         Shop.addUser();
         Shop.addProduct();
-        Shop.addAwaiting();
-        System.out.println(users);
-        //Thread.sleep(3000);
         runMenu();
     }
 
@@ -207,13 +204,11 @@ public class Main {
             if (!seller.isAllowed()) {
                 System.out.println("1. Get authorization to sell");
                 System.out.println("2. View my available products");
-                System.out.println("3. View wallet");
-                System.out.println("4. Go to the main menu");
+                System.out.println("3. Go to the main menu");
             } else {
                 System.out.println("1. Add product to list");
                 System.out.println("2. View my available products");
-                System.out.println("3. View wallet");
-                System.out.println("4. Go to the main menu");
+                System.out.println("3. Go to the main menu");
             }
             int choice;
             choice = sc.nextInt();
@@ -226,9 +221,6 @@ public class Main {
                         seller.viewMyAvailableProducts(seller);
                         break;
                     case 3:
-                        seller.viewSellerWallet(seller);
-                        break;
-                    case 4:
                         runMenu();
                         break;
                     default:
@@ -259,15 +251,12 @@ public class Main {
                         choice1 = sc.nextInt();
                         seller.addProductBySeller(seller, choice1);
                         System.out.println("Product added successfully!");
-                        System.out.println(products);
+                        Thread.sleep(3000);
                         break;
                     case 2:
                         seller.viewMyAvailableProducts(seller);
                         break;
                     case 3:
-                        seller.viewSellerWallet(seller);
-                        break;
-                    case 4:
                         runMenu();
                         break;
                     default:
@@ -294,7 +283,9 @@ public class Main {
             System.out.println("3. Give authorization to seller");
             System.out.println("4. Add an admin");
             System.out.println("5. View user profile");
-            System.out.println("6. Go to the main menu");
+            System.out.println("6. View shop profit");
+            System.out.println("7. View completed orders");
+            System.out.println("8. Go to the main menu");
             int choice;
             choice = sc.nextInt();
             switch (choice) {
@@ -320,8 +311,14 @@ public class Main {
                     Thread.sleep(10000);
                     break;
                 case 6:
-                    runMenu();
+                    System.out.println("Shop profit until this moment is : " + Shop.getProfit());
+                    Thread.sleep(3000);
                     break;
+                case 7:
+                    System.out.println(complete);
+                    Thread.sleep(3000);
+                case 8:
+                    runMenu();
                 default:
                     System.out.println("This option doesn't exist!");
                     adminMenu(username, password);

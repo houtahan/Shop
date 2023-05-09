@@ -450,7 +450,6 @@ public class Seller {
     }
 
 
-
     public void viewSellerWallet(Seller seller) throws InterruptedException {
         System.out.println("You have " + this.wallet + " in your seller account");
         Thread.sleep(3000);

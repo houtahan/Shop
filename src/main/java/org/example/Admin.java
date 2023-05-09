@@ -59,7 +59,6 @@ public class Admin {
             temp3.addAll(temp2);
             awaiting.get(choice-1).getUser().setPurchasedProducts(temp3);
             complete.add(awaiting.get(choice-1).getConfirm());
-            System.out.println(complete);
             System.out.println("Order was successfully registered!");
             Thread.sleep(3000);
             double transaction = awaiting.get(choice-1).getTotal();
@@ -67,8 +66,6 @@ public class Admin {
             awaiting.get(choice-1).getUser().setWallet(userWallet0-transaction);;
             double shopProfit0 = Shop.getProfit();
             Shop.setProfit(shopProfit0 + transaction*0.1);
-            System.out.println(Shop.getProfit());
-            Thread.sleep(10000);
             awaiting.get(choice-1).getUser().setPurchasedProducts(awaiting.get(choice-1).getConfirm());
             ArrayList<Product> empty = new ArrayList<>();
             awaiting.get(choice-1).getUser().setUserOrders(empty);

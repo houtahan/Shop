@@ -168,14 +168,14 @@ public class User {
                         total = this.shoppingCart.get(i).getPrice() + total;
                     }
                     if (this.subscriptionService == true) {
-                        System.out.println("You are part of our subscription plan so you will get 2% off and free shipping!");
-                        total = total * (98 / 100);
-                        System.out.println("Your wallet :" + this.wallet);
-                        System.out.println("Your total :" + total);
+                        System.out.println("You are part of our subscription plan so you will get free shipping!");
+                        Thread.sleep(3000);
                     } else {
-                        System.out.println("Your wallet :" + this.wallet);
-                        System.out.println("Your total :" + total);
+                        System.out.println("You are not part of our subscription service!");
+                        Thread.sleep(2500);
                     }
+                    System.out.println("Your wallet :" + this.wallet);
+                    System.out.println("Your total :" + total);
                     if (this.wallet >= total) {
                         System.out.println("You have enough funds to purchase!");
                         Thread.sleep(3000);
